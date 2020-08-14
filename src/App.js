@@ -1,10 +1,21 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import LandingPage from './Pages/LandingPage/LandingPage'
+import LandingPage from "./Pages/LandingPage/LandingPage";
 
 function App() {
   return (
-    <LandingPage></LandingPage>
+    <Router>
+      <Switch>
+        <Route path="/Lessons"></Route>
+        <Route path="/Films"></Route>
+        <Route path="/Myths"></Route>
+        <Route path="/Thassos"></Route>
+        <Route path="/">
+          <LandingPage></LandingPage>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
