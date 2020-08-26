@@ -1,37 +1,54 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 import {
-    Nav,
-    NavbarList,
-    NavbarListItem,
-  } from "./Navbar.style";
+  Nav,
+  NavbarList,
+  NavbarListItem,
+  Header,
+  Headings,
+  TitlesDiv,
+} from "./Navbar.style";
 
 const Navbar = () => {
+  const LinkStyle = { textDecoration: "none", color: "black" };
 
-    const LinkStyle = {textDecoration: 'none', color: 'black'}
-
-    return (
-        <Nav>
+  return (
+    <Header>
+      <TitlesDiv>
+        <Headings>GAP ARCHIVE</Headings>
+      </TitlesDiv>
+      <Nav>
         <NavbarList>
           <NavbarListItem>
-            <Link to="/" style={LinkStyle}>Archive</Link>
+            <Link to="/" style={LinkStyle}>
+              Archive
+            </Link>
           </NavbarListItem>
           <NavbarListItem>
-            <Link to="/Lessons" style={LinkStyle}>Lessons</Link>
+            <Link to="/Lessons" style={LinkStyle}>
+              Lessons
+            </Link>
           </NavbarListItem>
           <NavbarListItem>
-            <Link to="/Films" style={LinkStyle}>Films</Link>
+            <Link to="/Films" style={LinkStyle}>
+              Films
+            </Link>
           </NavbarListItem>
           <NavbarListItem>
-            <Link to="/Myths" style={LinkStyle}>Myths</Link>
+            <Link to="/Myths" style={LinkStyle}>
+              Myths
+            </Link>
           </NavbarListItem>
           <NavbarListItem>
-            <Link to="/Thassos" style={LinkStyle}>Thassos</Link>
+            <Link to="/Thassos" style={LinkStyle}>
+              Thassos
+            </Link>
           </NavbarListItem>
         </NavbarList>
       </Nav>
-    )
-}
+    </Header>
+  );
+};
 
 export default Navbar;
